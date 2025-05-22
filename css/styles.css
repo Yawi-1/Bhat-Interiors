@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+/* Navbar Css Starts Here */
+.header{
+    padding: 0.7rem 2rem;
+    display: flex;
+    border: 1px solid #e4dfdf;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo{
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgb(24, 60, 204);
+}
+
+nav{
+    padding: 0.5rem 2rem;
+}
+nav > ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    justify-content: space-between;
+}
+nav > ul > li a{
+    color: rgb(24, 60, 204);
+    font-weight: 500;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+nav > ul > li a:hover{
+    background-color: rgb(24, 60, 204);
+    color: white;
+}
+
+.navbtn{
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: rgb(24, 60, 204);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.navbtn:hover{
+    opacity: 0.9;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: rgb(24, 60, 204);
+    cursor: pointer;
+}
+
+.close-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: rgb(24, 60, 204);
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+@media screen and (max-width: 768px){
+    .header{
+        padding: 0.5rem 0.5rem;
+    }   
+    .container{
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        width: 250px;
+        background: white;
+        transition: 0.3s;
+        padding: 2rem;
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    .close-btn {
+        display: block;
+    }
+
+    nav > ul{
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    nav > ul > li a{
+        padding: 0.8rem 1rem;
+        display: block;
+    }
+
+    .navbtn{
+        display: none;
+    }
+}
+/* Navbar Css ends Here */
+/* Hero Section Css Starts Here */
+.hero {
+  position: relative;
+  background: url('../images/heroImage.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(15, 15, 15, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  
+}
+
+#service-text {
+  transition: opacity 0.5s ease;
+  color: rgb(221, 255, 3);
+}
+@media screen and (max-width: 768px){
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Hero Section Css Ends Here */
+ 
