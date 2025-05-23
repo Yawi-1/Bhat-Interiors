@@ -7,7 +7,9 @@
 a{
     text-decoration: none;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /* Navbar Css Starts Here */
 .header{
     padding: 0.7rem 2rem;
@@ -143,52 +145,123 @@ nav > ul > li a:hover{
 }
 /* Navbar Css ends Here */
 /* Hero Section Css Starts Here */
+/* Swiper container styling */
+.mySwiper {
+  width: 100%;
+  height: 100vh;
+}
+/* Each slide background */
+swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+/* Hero section */
 .hero {
   position: relative;
-  background: url('../images/heroImage.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
 }
-
+/* Overlay for dark effect over images */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(15, 15, 15, 0.5);
+  background-color: rgba(5, 5, 5, 0.5);
   z-index: 1;
 }
-
+/* Hero content styling */
 .hero-content {
-  position: relative;
+  position: absolute;
   z-index: 2;
   color: white;
   padding: 1rem;
+  max-width: 90%;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
 }
-
+/* Title & animated text */
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  
   
 }
-
 #service-text {
   transition: opacity 0.5s ease;
+  font-weight: 600;
   color: rgb(221, 255, 3);
+  
 }
-@media screen and (max-width: 768px){
-    .hero-content h1 {
-        font-size: 2rem;
-    }
+/* CTA button */
+.ctabutton {
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  background-color: rgb(24, 60, 204);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+.ctabutton:hover {
+  background-color: rgb(0, 40, 180);
+  transform: scale(1.05);
+}
+
+/* Keyframe animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .hero-content span {
+    font-size: 2rem;
+  }
+
+  .ctabutton {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .ctabutton {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
 /* Hero Section Css Ends Here */
+/* Our Services Section */
+
+
  

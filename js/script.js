@@ -25,4 +25,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-// Navbar toggle functionality ends here
+// change the services text
+const services = [
+        "PVC Wall Paneling",
+        "Ceiling Wallpaper",
+        "Modular Kitchen",
+        "Aluminium Partition",
+        "Wood Floor",
+        "PVC Matting",
+        "SSS Decor",
+        "SSS Doors",
+        "ACP Sheets",
+        "All Hardware",
+      ];
+      let index = 0;
+      const serviceText = document.getElementById("service-text");
+      setInterval(() => {
+        // Fade out
+        serviceText.style.opacity = 0;
+
+        setTimeout(() => {
+          index = (index + 1) % services.length;
+          serviceText.textContent = services[index];
+
+          // Fade in
+          serviceText.style.opacity = 1;
+        }, 1000); // Wait for fade-out to complete
+      }, 2500); 
+    //   Gallery Section
+    
