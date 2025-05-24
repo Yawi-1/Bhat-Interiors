@@ -4,11 +4,11 @@
   text-align: center;
 }
 
-.section-title {
+.gallery-title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   font-weight: 700;
-  color: #222;
+  color: var(--gold-color);
 }
 
 .gallery-grid {
