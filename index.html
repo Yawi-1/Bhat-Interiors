@@ -12,16 +12,14 @@
     <link rel="stylesheet" href="/css/hero.css" />
     <link rel="stylesheet" href="/css/services.css" />
     <link rel="stylesheet" href="/css/gallery.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Style+Script&display=swap"
-      rel="stylesheet"
-    />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Style+Script&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -29,47 +27,39 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
   </head>
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="container">
-        <h1 class="logo">Bhat Interiors</h1>
-        <button class="menu-toggle">
-          <i class="fa fa-bars"></i>
-        </button>
-        <nav class="nav">
-          <button class="close-btn">
-            <i class="fa fa-times"></i>
-          </button>
-          <ul>
-            <li>
-              <a href="#home"><i class="fa fa-home"></i> Home</a>
-            </li>
-            <li>
-              <a href="#services"><i class="fa fa-suitcase"></i> Services</a>
-            </li>
-            <li>
-              <a href="#gallery"><i class="fa fa-photo"></i> Gallery</a>
-            </li>
-            <li>
-              <a href="#contact"><i class="fa fa-phone"></i> Contact Us</a>
-            </li>
-            <li>
-              <a href="#about"><i class="fa fa-user"></i> About Us</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="navbtn">
-          Get a quote <i class="fa fa-envelope"></i>
-        </button>
-      </div>
-    </header>
+  <div class="container">
+    <h1 class="logo">Bhat Interiors</h1>
+    <button class="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </button>
+    <nav class="nav">
+      <button class="close-btn">
+        <i class="fa fa-times"></i>
+      </button>
+      <ul>
+        <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#services"><i class="fa fa-suitcase"></i> Services</a></li>
+        <li><a href="#gallery"><i class="fa fa-photo"></i> Gallery</a></li>
+        <li><a href="#contact"><i class="fa fa-phone"></i> Contact Us</a></li>
+        <li><a href="#about"><i class="fa fa-user"></i> About Us</a></li>
+      </ul>
+    </nav>
+    <button class="navbtn">
+      Get a quote <i class="fa fa-envelope"></i>
+    </button>
+  </div>
+</header>
     <!-- Hero Section -->
-
-
 <main id="home" class="hero">
-  <div class="decorative-shape"></div>
   
   <div class="hero-content">
     <div class="hero-header">
@@ -106,6 +96,9 @@
         </div>
       </div>
       <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+
     </div>
   </div>
 </main>
@@ -135,8 +128,6 @@
       <p>Stylish and durable wall paneling solutions for every space.</p>
     </div>
 </section>
-
-
     <!-- Gallery Section -->
  <section id="gallery" class="gallery-section">
   <h2 class="gallery-title">Our Gallery</h2>
@@ -159,24 +150,38 @@
     </div>
   </div>
 </section> 
+<!-- Contact Section -->
+ <section id="contact" class="interior-contact-section">
+  <div class="interior-contact-container">
+    <div class="interior-contact-info">
+      <h2>Contact Us</h2>
+      <p><i class="fa fa-map-marker"></i> Near Railway Station Banihal, J&K, 182146</p>
+      <p><i class="fa fa-phone"></i> <a href="tel:9906228228">Call us at : +91 9906228228</a></p>
+      <p><i class="fa fa-phone"></i> <a href="tel:6006760046">Call us at : +91 60067 60046</a></p>
+      <p><i class="fa fa-envelope"></i> <a href="mailto:i@yourdomain.com">info@yourdomain.com</a></p>
+      <div class="interior-map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d753.1306404794509!2d75.19091966957424!3d33.450718717301584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391df030e9a5f31f%3A0xde26e48df8a2a113!2sNH%20244A%2C%20182146!5e1!3m2!1sen!2sin!4v1748182047563!5m2!1sen!2sin"
+         width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- <iframe 
+        src=""
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe> -->
+      </div>
+    </div>
+
+    <form class="interior-contact-form" id="contact-form">
+      <h2>Send a Message</h2>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+    </form>
+  </div>
+</section>
 
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-    const swiper = new Swiper(".mySwiper", {
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    });
-  </script>
     <script src="js/script.js"></script>
   </body>
 </html>
