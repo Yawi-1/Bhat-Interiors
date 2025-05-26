@@ -39,6 +39,9 @@ html {
   max-width: 1200px;
   margin: 0 auto;
 }
+.container > a{
+  z-index: 1001;
+}
 
 .logo {
   font-weight: 600;
@@ -46,6 +49,7 @@ html {
   color: var(--gold-color);
   font-family: 'Style Script', cursive;
   z-index: 1001;
+  cursor: pointer;
 }
 
 nav {
@@ -99,10 +103,33 @@ nav ul li a:hover {
   color: var(--gold-color);
   cursor: pointer;
 }
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+    height: 40px;
+  font-size: 24px;
+  color: #e67e22;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; 
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background-color 0.3s;
+}
+#scrollToTopBtn:hover {
+  transform: rotate(360deg); 
+}
+#scrollToTopBtn.show {
+  display: block;
+  animation: fadeIn 0.5s;
+}
 
 @media screen and (max-width: 768px) {
   .header {
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 1rem;
   }
 
   .menu-toggle {

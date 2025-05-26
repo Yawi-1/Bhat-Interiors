@@ -95,4 +95,54 @@ const swiper = new Swiper(".mySwiper", {
     speed: 1000, 
 });
 
+// Scroll to top button functionality
+ const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add("show");
+          } else {
+            scrollToTopBtn.classList.remove("show");
+          }
+        });
+      
+        scrollToTopBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+
+//Contact form js
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = this;
+    const submitBtn = document.getElementById("submit-btn");
+    const spinner = document.getElementById("spinner");
+    const btnText = document.getElementById("btn-text");
+
+    // Show spinner and hide text
+    spinner.style.display = "inline-block";
+    btnText.textContent = "Loading...";
+    submitBtn.disabled = true; // Disable button
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("Message sent successfully!");
+        form.reset();
+      } else {
+        alert("There was a problem submitting the form.");
+      }
+    })
+    .catch(error => {
+      alert("Error: " + error.message);
+    })
+    .finally(() => {
+      // Hide spinner and show text again
+      spinner.style.display = "none";
+      btnText.textContent = "Send";
+      submitBtn.disabled = false;
+    });
+  }); 
     

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+  <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/css/services.css" />
     <link rel="stylesheet" href="/css/gallery.css" />
     <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -37,7 +39,9 @@
     <!-- Header -->
     <header class="header">
   <div class="container">
-    <h1 class="logo">Bhat Interiors</h1>
+    <a href="#home">
+      <h1  class="logo">Bhat Interiors</h1>
+    </a>
     <button class="menu-toggle">
       <i class="fa fa-bars"></i>
     </button>
@@ -63,13 +67,13 @@
   
   <div class="hero-content">
     <div class="hero-header">
-      <h1>
+      <h1 data-aos="fade-in-left">
         Transform Your Space with<br>
-        <span class="service-highlight">Premium Interior Solutions</span>
+        <span  class="service-highlight">Premium Interior Solutions</span>
       </h1>
     </div>
     <div class="hero-services">
-      <span class="span1">We Provides  </span>
+      <span  class="span1">We Provides  </span>
       <span class="span2" id="service-text">Wall Paneling</span>
     </div>
     <div class="contact-section">
@@ -101,28 +105,32 @@
 
     </div>
   </div>
+  <!-- Scroll to top button -->
+      <button id="scrollToTopBtn">
+            <i class="fa fa-arrow-up"></i>
+        </button>
 </main>
 
     <!-- Services Section -->
  <section id="services" class="services-section">
   <h2 class="service-title">Our Services</h2>
   <div class="services-grid">
-    <div class="service-card">
+    <div data-aos="fade-up" class="service-card">
       <img src="./images/heroImage.jpg" alt="PVC Paneling" />
       <h3>PVC Paneling</h3>
       <p>Stylish and durable wall paneling solutions for every space.</p>
     </div>
-    <div class="service-card">
+    <div  data-aos="fade-up" class="service-card">
       <img src="./images/modular-kitchen.jpg" alt="Modular Kitchen" />
       <h3>Modular Kitchen</h3>
       <p>Custom-designed modular kitchens that fit your lifestyle.</p>
     </div>
-    <div class="service-card">
+    <div  data-aos="fade-up" class="service-card">
       <img src="./images/slider3.jpg" alt="Wall Paneling" />
       <h3>Wall Paneling</h3>
       <p>Transform your walls with elegant and modern paneling designs.</p>
     </div>
-    <div class="service-card">
+    <div  data-aos="fade-up" class="service-card">
       <img src="./images/slider1.jpg" alt="PVC Paneling" />
       <h3>Ceiling Wallpaper</h3>
       <p>Stylish and durable wall paneling solutions for every space.</p>
@@ -132,19 +140,19 @@
  <section id="gallery" class="gallery-section">
   <h2 class="gallery-title">Our Gallery</h2>
   <div class="gallery-grid">
-    <div class="gallery-item">
+    <div  data-aos="zoom-in" class="gallery-item">
       <img src="/images/heroImage.jpg" alt="PVC Paneling">
       <div class="overlay-title">PVC Paneling</div>
     </div>
-    <div class="gallery-item">
+    <div data-aos="zoom-in" class="gallery-item">
       <img src="/images/wall-decor.jpg" alt="Wall Paneling">
       <div class="overlay-title">Wall Paneling</div>
     </div>
-    <div class="gallery-item">
+    <div data-aos="zoom-in" class="gallery-item">
       <img src="/images/slider2.jpg" alt="Ceiling Wallpaper">
       <div class="overlay-title">Ceiling Wallpaper</div>
     </div>
-    <div class="gallery-item">
+    <div data-aos="zoom-in" class="gallery-item">
       <img src="/images/modular-kitchen.jpg" alt="Modular Kitchen">
       <div class="overlay-title">Modular Kitchen</div>
     </div>
@@ -162,26 +170,31 @@
       <div class="interior-map-wrapper">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d753.1306404794509!2d75.19091966957424!3d33.450718717301584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391df030e9a5f31f%3A0xde26e48df8a2a113!2sNH%20244A%2C%20182146!5e1!3m2!1sen!2sin!4v1748182047563!5m2!1sen!2sin"
          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <!-- <iframe 
-        src=""
-          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe> -->
       </div>
     </div>
 
-    <form class="interior-contact-form" id="contact-form">
+    <form action="https://api.web3forms.com/submit" method="post" class="interior-contact-form" id="contact-form">
       <h2>Send a Message</h2>
+      <input type="hidden" name="access_key" value="19c2f795-3464-491b-ae84-589794559686"/>
+      
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+      <button type="submit" id="submit-btn">
+     <i class="fa fa-spinner fa-spin" style="display: none;" id="spinner"></i>
+  <span id="btn-text"><i class="fa fa-paper-plane"></i> Send</span>
+</button>
     </form>
   </div>
 </section>
 
-
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
   </body>
 </html>
