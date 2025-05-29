@@ -100,8 +100,6 @@
         </div>
       </div>
       <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
 
     </div>
   </div>
@@ -110,6 +108,7 @@
             <i class="fa fa-arrow-up"></i>
         </button>
 </main>
+
 
     <!-- Services Section -->
  <section id="services" class="services-section">
@@ -137,27 +136,62 @@
     </div>
 </section>
     <!-- Gallery Section -->
- <section id="gallery" class="gallery-section">
-  <h2 class="gallery-title">Our Gallery</h2>
-  <div class="gallery-grid">
-    <div  data-aos="zoom-in" class="gallery-item">
-      <img src="/images/heroImage.jpg" alt="PVC Paneling">
-      <div class="overlay-title">PVC Paneling</div>
-    </div>
-    <div data-aos="zoom-in" class="gallery-item">
-      <img src="/images/wall-decor.jpg" alt="Wall Paneling">
-      <div class="overlay-title">Wall Paneling</div>
-    </div>
-    <div data-aos="zoom-in" class="gallery-item">
-      <img src="/images/slider2.jpg" alt="Ceiling Wallpaper">
-      <div class="overlay-title">Ceiling Wallpaper</div>
-    </div>
-    <div data-aos="zoom-in" class="gallery-item">
-      <img src="/images/modular-kitchen.jpg" alt="Modular Kitchen">
-      <div class="overlay-title">Modular Kitchen</div>
-    </div>
+<section class="gallery-container">
+        <section class="gallery-section">
+            <h2 class="gallery-title">Our Gallery</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in" data-category="Paneling">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=450&q=80" alt="PVC Paneling">
+                    <div class="overlay">
+                        <div class="overlay-title">PVC Paneling</div>
+                        <div class="overlay-content">Premium PVC panels with moisture resistance and elegant finish for modern interiors.</div>
+                        <button  class="view-btn">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-category="Paneling">
+                    <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=450&q=80" alt="Wall Paneling">
+                    <div class="overlay">
+                        <div class="overlay-title">Wall Paneling</div>
+                        <div class="overlay-content">Custom-designed wall panels that transform spaces with texture and depth.</div>
+                        <button class="view-btn">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-category="Wallpaper">
+                    <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=450&q=80" alt="Ceiling Wallpaper">
+                    <div class="overlay">
+                        <div class="overlay-title">Ceiling Wallpaper</div>
+                        <div class="overlay-content">Innovative ceiling designs that add dimension and character to any room.</div>
+                        <button  class="view-btn">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-category="Kitchen">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=450&q=80" alt="Modular Kitchen">
+                    <div class="overlay">
+                        <div class="overlay-title">Modular Kitchen</div>
+                        <div class="overlay-content">Custom modular kitchens designed for functionality and contemporary aesthetics.</div>
+                        <button class="view-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+    <!-- Lightbox Modal -->
+   <div id="imageModal" class="modal">
+  <span class="close-btn">&times;</span>
+  <span class="prev-btn">&#10094;</span>
+  <span class="next-btn">&#10095;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Modal Image" />
+    <div id="modalTitle" class="modal-title"></div>
   </div>
-</section> 
+</div>
+
+
 <!-- Contact Section -->
  <section id="contact" class="interior-contact-section">
   <div class="interior-contact-container">
