@@ -201,7 +201,7 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.close-btn {
+.modal-close-btn {
   position: absolute;
   top: 20px;
   right: 30px;
@@ -301,7 +301,7 @@ body {
     font-size: 2rem;
     padding: 10px;
     top: auto;
-    bottom: 30px;  /* reposition lower on small screens */
+    bottom: 30px;
     transform: none;
     z-index: 1001;
   }
